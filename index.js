@@ -31,20 +31,20 @@ function addGamesToPage(games) {
 
     // loop over each item in the data
     games.forEach(game => {
-
+    
         // create a new div element, which will become the game card
         const gameDiv = document.createElement('div')
 
         // add the class game-card to the list
         gameDiv.classList.add('game-card');
-
+            
         // set the inner HTML using a template literal to display some info 
         // about each game
         // TIP: if your images are not displaying, make sure there is space
         // between the end of the src attribute and the end of the tag ("/>")
         gameDiv.innerHTML = `
-            <img class = "game-img" src = "${game.img}"></img>
-            <p> ${game.name}</p>
+            <img class="game-img" src="${game.img}"></img>
+            <p>${game.name}</p>
             <p>${game.description}</p>`
 
         // append the game to the games-container
@@ -66,12 +66,14 @@ addGamesToPage(GAMES_JSON)
 const contributionsCard = document.getElementById("num-contributions");
 
 // use reduce() to count the number of total contributions by summing the backers
-const totalContributions = GAMES_JSON.reduce((total, game)=>{
+
+const totalContributions = GAMES_JSON.reduce((total, game) =>{
     return total + game.backers;
-}, 0)
+},0)
+
 
 // set the inner HTML using a template literal and toLocaleString to get a number with commas
-contributionsCard.innerHTML = ` ${totalContributions.toLocaleString('en-US')}`
+contributionsCard.innerHTML = `${totalContributions.toLocaleString('en-US')}`
 
 // grab the amount raised card, then use reduce() to find the total amount raised
 const raisedCard = document.getElementById("total-raised");
@@ -81,7 +83,7 @@ const amountRaised = GAMES_JSON.reduce((amnt,game)=>{
 
 // set inner HTML using template literal
 
-raisedCard.innerHTML = "$" + `${amountRaised.toLocaleString('en-US')}`
+raisedCard.innerHTML = "$"+`${amountRaised.toLocaleString('en-US')}`
 
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
@@ -102,7 +104,7 @@ function filterUnfundedOnly() {
         return game.pledged < game.goal
     })
 
-    // use the function we previously created to add the unfunded games to the DOM
+    // use the function we previously created to add the unfunded games to the DOM  
     addGamesToPage(filtered)
 }
 
@@ -151,17 +153,17 @@ const unfunded = GAMES_JSON.filter((game)=>{
 })
 
 // create a string that explains the number of unfunded games using the ternary operator
-const tempDescr = `A Total of $${amountRaised.toLocaleString('en-US')} has been raised for ${GAMES_JSON.length} games. 
-                    Currently, ${unfunded.length > 1 ? unfunded.length : "1"}
+
+const tempDescr = `A Total of $${amountRaised.toLocaleString('en-US')} has been raised for ${GAMES_JSON.length} games. Currently, ${unfunded.length > 1 ? unfunded.length : "1"}
                     game remains unfunded. We need your help to fund these amazing games!`
 
 // create a new DOM element containing the template string and append it to the description container
-const newDOM = document.createElement('div')
+const newDom = document.createElement('div')
 const newP = document.createElement('p')
 newP.innerHTML = `${tempDescr}`
 
-newDOM.appendChild(newP)
-descriptionContainer.appendChild(newDOM)
+newDom.appendChild(newP)
+descriptionContainer.appendChild(newDom)
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
