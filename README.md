@@ -20,7 +20,7 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented features:
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://imgur.com/a/mKsCM9Q)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ... https://www.screentogif.com for Windows
