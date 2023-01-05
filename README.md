@@ -20,7 +20,7 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented features:
 
-![Imgur GIF](https://imgur.com/a/mKsCM9Q.gif)
+<img src = https://imgur.com/a/mKsCM9Q.gif ></img>
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ... https://www.screentogif.com for Windows
