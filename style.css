@@ -22,10 +22,11 @@ body {
 .stats-container {
     display:flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .stats-container:hover {
-    cursor: pointer;
+    
     box-shadow: 0 0 30px lightblue;
 }
 

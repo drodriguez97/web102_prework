@@ -5,6 +5,7 @@
 */
 
 // import the JSON data about the crowd funded games from the games.js file
+import games from './games.js';
 import GAMES_DATA from './games.js';
 
 // create a list of objects to store the data about the games using JSON.parse
@@ -48,12 +49,13 @@ function addGamesToPage(games) {
 
         // append the game to the games-container
         gamesContainer.appendChild(gameDiv);
-    });
+});
 }
 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
 addGamesToPage(GAMES_JSON)
+
 /*************************************************************************************
  * Challenge 4: Create the summary statistics at the top of the page displaying the
  * total number of contributions, amount donated, and number of games on the site.
@@ -160,6 +162,7 @@ newP.innerHTML = `${tempDescr}`
 
 newDOM.appendChild(newP)
 descriptionContainer.appendChild(newDOM)
+
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
  * Skills used: spread operator, destructuring, template literals, sort 
